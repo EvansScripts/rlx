@@ -1654,15 +1654,6 @@ function library:Init()
 		self.base.Parent = game:GetService"CoreGui"
 	end
 	
-	
-	self.cursor = self.cursor or self:Create("Frame", {
-		ZIndex = 100,
-		AnchorPoint = Vector2.new(0, 0),
-		Size = UDim2.new(0, 5, 0, 5),
-		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-		Parent = self.base
-	})
-	
 	for _, window in next, self.windows do
 		if window.canInit and not window.init then
 			window.init = true
@@ -1674,7 +1665,6 @@ end
 
 function library:Close()
 	self.open = not self.open
-	self.cursor.Visible = self.open
 	if self.activePopup then
 		self.activePopup:Close()
 	end
