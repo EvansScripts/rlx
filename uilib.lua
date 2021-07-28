@@ -9,9 +9,8 @@ function Note:UI()
     end
 end
 
-function Note:CreateWindow(text, canvas)
+function Note:CreateWindow(text)
 	text = text or "Note Library"
-	canvas = canvas or 1
 	
 	local NoteLibrary = Instance.new("ScreenGui")
 	local Dragify = Instance.new("Frame")
@@ -141,8 +140,9 @@ function Note:CreateWindow(text, canvas)
 	
 	local TabHandler = {}
 	
-	function TabHandler:CreateTab(tabText)
+	function TabHandler:CreateTab(tabText, canvas)
 		tabText = tabText or "New Tab"
+		canvas = canvas or 1
 		
 		local tabButton = Instance.new("TextButton")
 		local tabBtnCorner = Instance.new("UICorner")
