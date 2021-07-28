@@ -27,6 +27,7 @@ function Note:CreateWindow(text)
 
 	NoteLibrary.Name = LibName
 	NoteLibrary.Parent = game.CoreGui
+	NoteLibrary.ResetOnSpawn = false
 	
 	function dragify(Frame)
 		dragToggle = nil
