@@ -1,5 +1,14 @@
 local Note = {}
 
+local LibName = tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100))
+function Note:UI()
+    if game.CoreGui[LibName].Enabled then
+        game.CoreGui[LibName].Enabled = false
+    else
+        game.CoreGui[LibName].Enabled = true
+    end
+end
+
 function Note:CreateWindow(text, canvas)
 	text = text or "Note Library"
 	canvas = canvas or 1
@@ -17,7 +26,7 @@ function Note:CreateWindow(text, canvas)
 	local allCorner = Instance.new("UICorner")
 	local pageFolder = Instance.new("Folder")
 
-	NoteLibrary.Name = "NoteLibrary"
+	NoteLibrary.Name = LibName
 	NoteLibrary.Parent = game.CoreGui
 	
 	function dragify(Frame)
