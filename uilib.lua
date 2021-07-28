@@ -31,7 +31,7 @@ function Note:CreateWindow(text)
 	
 	function dragify(Frame)
 		dragToggle = nil
-		dragSpeed = .05 -- You can edit this.
+		dragSpeed = .01
 		dragInput = nil
 		dragStart = nil
 		dragPos = nil
@@ -67,6 +67,8 @@ function Note:CreateWindow(text)
 			end
 		end)
 	end
+	
+	-- forgot who created the dragify, anyway credits to them
 	
 	Dragify.Name = "Dragify"
 	Dragify.Parent = NoteLibrary
@@ -301,7 +303,7 @@ function Note:CreateWindow(text)
 			bindButton.BackgroundColor3 = Color3.fromRGB(42, 43, 49)
 			bindButton.BorderColor3 = Color3.fromRGB(255, 109, 83)
 			bindButton.Position = UDim2.new(0.868347347, 0, 0.162162155, 0)
-			bindButton.Size = UDim2.new(0, 35, 0, 24)
+			bindButton.Size = UDim2.new(0, 45, 0, 24)
 			bindButton.Font = Enum.Font.Gotham
 			bindButton.Text = key
 			bindButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -360,7 +362,7 @@ function Note:CreateWindow(text)
 			textBox.Name = "textBox"
 			textBox.Parent = textBoxLabel
 			textBox.BackgroundColor3 = Color3.fromRGB(42, 43, 49)
-            textBox.BackgroundTransparency = 1
+          		textBox.BackgroundTransparency = 1
 			textBox.Position = UDim2.new(0.380952388, 0, 0.166666389, 0)
 			textBox.Size = UDim2.new(0, 209, 0, 23)
 			textBox.Font = Enum.Font.GothamSemibold
