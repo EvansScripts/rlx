@@ -359,6 +359,7 @@ function Note:CreateWindow(text)
 			textBox.Name = "textBox"
 			textBox.Parent = textBoxLabel
 			textBox.BackgroundColor3 = Color3.fromRGB(42, 43, 49)
+            textBox.BackgroundTransparency = 1
 			textBox.Position = UDim2.new(0.380952388, 0, 0.166666389, 0)
 			textBox.Size = UDim2.new(0, 209, 0, 23)
 			textBox.Font = Enum.Font.GothamSemibold
