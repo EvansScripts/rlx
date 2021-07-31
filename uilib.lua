@@ -379,7 +379,6 @@ function Note:CreateWindow(text)
 			textBox.FocusLost:Connect(function(enterPressed)
 				if not enterPressed then return end
 				callback(textBox.Text)
-				textBox.Text = ""
 			end)
 		end
 		
